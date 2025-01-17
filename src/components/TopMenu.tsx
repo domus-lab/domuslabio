@@ -37,7 +37,7 @@ export const TopMenu = () => {
           Pricing
         </Button>
         <Button
-          onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+          onClick={() => window.open('https://cal.com/juan-luis-gv-swcapy/30min', '_blank')}
           className="bg-black text-white rounded-full hover:bg-gray-800 group"
         >
           Connect

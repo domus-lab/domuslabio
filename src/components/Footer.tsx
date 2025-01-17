@@ -11,7 +11,16 @@ export const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-slate-400">
               <li>hello@domuslab.io</li>
-              <li>Book a Call</li>
+              <li>
+                <a 
+                  href="https://cal.com/juan-luis-gv-swcapy/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Book a Call
+                </a>
+              </li>
             </ul>
           </div>
         </div>
