@@ -17,13 +17,6 @@ export const TopMenu = () => {
       <div className="flex items-center gap-6 px-4">
         <Button
           variant="ghost"
-          onClick={() => scrollToSection("offering")}
-          className="text-black hover:bg-transparent hover:text-gray-600"
-        >
-          Offering
-        </Button>
-        <Button
-          variant="ghost"
           onClick={() => scrollToSection("work")}
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
