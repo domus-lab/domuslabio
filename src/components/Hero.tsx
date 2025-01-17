@@ -26,10 +26,6 @@ export const Hero = () => {
     <section
       ref={heroRef}
       className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: 'radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px)',
-        backgroundSize: '24px 24px'
-      }}
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
