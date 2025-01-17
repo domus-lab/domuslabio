@@ -1,10 +1,15 @@
-import { Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const TopMenu = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   };
 
   return (
@@ -32,11 +37,11 @@ export const TopMenu = () => {
           Pricing
         </Button>
         <Button
-          onClick={() => scrollToSection("contact")}
-          className="bg-black text-white rounded-full hover:bg-gray-800"
+          onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+          className="bg-black text-white rounded-full hover:bg-gray-800 group"
         >
-          <Phone className="h-5 w-5 mr-2" />
           Connect
+          <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
     </div>
