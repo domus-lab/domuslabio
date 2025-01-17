@@ -54,14 +54,14 @@ export const Pricing = () => {
                   index === 1 
                     ? "border-2 border-[#222222] shadow-lg transform -translate-y-4 hover:-translate-y-6 transition-all duration-300" 
                     : "border-0 hover:-translate-y-2 transition-transform duration-300"
-                } bg-white z-10 relative`}
+                } bg-white z-10 relative flex flex-col`}
               >
                 <CardHeader>
                   <CardTitle className="text-gray-800">{plan.title}</CardTitle>
                   <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-3 mb-6 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -73,7 +73,7 @@ export const Pricing = () => {
                     ))}
                   </ul>
                   <Button 
-                    className={`w-full ${
+                    className={`w-full mt-auto ${
                       index === 1 
                         ? "bg-[#0a0a0a] hover:bg-[#222222] text-white" 
                         : "bg-[#222222] hover:bg-[#333333] text-white"
