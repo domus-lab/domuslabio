@@ -8,7 +8,7 @@ export const Pricing = () => {
       title: "MVP Start-up",
       description: "Start your business building an MVP",
       features: [
-        "Complete MVP development _usually_ in less than a month",
+        "Complete MVP development <i>usually</i> in less than a month",
         "Build Web and App using modern stack",
         "Deploy basic infrastructure in AWS",
         "Robust code and founder-led development",
@@ -19,7 +19,7 @@ export const Pricing = () => {
       title: "Growth",
       description: "Start your business building an MVP",
       features: [
-        "Complete MVP development _usually_ in less than a month",
+        "Complete MVP development <i>usually</i> in less than a month",
         "Build Web and App using modern stack",
         "Deploy basic infrastructure in AWS",
         "Robust code and founder-led development",
