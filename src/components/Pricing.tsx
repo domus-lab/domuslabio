@@ -48,7 +48,14 @@ export const Pricing = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`${index === 1 ? "border-primary" : ""} bg-white z-10 relative`}>
+              <Card 
+                key={index} 
+                className={`${
+                  index === 1 
+                    ? "border-primary shadow-lg transform -translate-y-4 hover:-translate-y-6 transition-all duration-300" 
+                    : "hover:-translate-y-2 transition-transform duration-300"
+                } bg-white z-10 relative`}
+              >
                 <CardHeader>
                   <CardTitle className="text-gray-800">{plan.title}</CardTitle>
                   <CardDescription className="text-gray-600">{plan.description}</CardDescription>
@@ -58,11 +65,20 @@ export const Pricing = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-600">{feature}</span>
+                        <span 
+                          className="text-sm text-gray-600"
+                          dangerouslySetInnerHTML={{ __html: feature }}
+                        />
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">
+                  <Button 
+                    className={`w-full ${
+                      index === 1 
+                        ? "bg-[#0a0a0a] hover:bg-[#222222] text-white" 
+                        : "bg-[#222222] hover:bg-[#333333] text-white"
+                    }`}
+                  >
                     {index === 2 ? "Contact Sales" : "Get Started"}
                   </Button>
                 </CardContent>
