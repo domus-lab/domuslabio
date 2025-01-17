@@ -1,34 +1,42 @@
+import { Users, ClipboardList, FileCheck, Repeat2, Rocket, Wrench } from "lucide-react";
+
 export const Process = () => {
   const steps = [
     {
       number: "01",
       title: "Consultation call",
       description: "We discuss your vision, goals, and requirements",
+      icon: Users,
     },
     {
       number: "02",
       title: "Planning",
       description: "We create a detailed roadmap and technical specifications",
+      icon: ClipboardList,
     },
     {
       number: "03",
       title: "Project agreement",
       description: "We align on deliverables, timeline, and costs",
+      icon: FileCheck,
     },
     {
       number: "04",
       title: "Weekly sprints",
       description: "Regular development cycles with continuous feedback",
+      icon: Repeat2,
     },
     {
       number: "05",
       title: "Release",
       description: "We deploy your solution and ensure smooth operation",
+      icon: Rocket,
     },
     {
       number: "06",
       title: "Support",
       description: "Ongoing maintenance and improvements as needed",
+      icon: Wrench,
     },
   ];
 
@@ -57,11 +65,11 @@ export const Process = () => {
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
 
-                {/* Number circle */}
+                {/* Icon circle */}
                 <div className="relative z-10">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
-                      {step.number}
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+                      {<step.icon size={24} />}
                     </div>
                   </div>
                 </div>
