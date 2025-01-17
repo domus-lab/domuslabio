@@ -30,7 +30,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-          From idea to product, <span className="inline-block animate-[blur_3s_ease-in-out_infinite] blur-[0.5px]">fast</span> and reliable.
+          From idea to product, <span className="inline-block animate-[style-morph_3s_ease-in-out_infinite]">fast</span> and reliable.
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
           Turning ideas into reality, fast, reliable and securely.
