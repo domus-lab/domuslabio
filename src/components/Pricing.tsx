@@ -48,7 +48,7 @@ export const Pricing = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={index === 1 ? "border-primary" : ""}>
+              <Card key={index} className={`${index === 1 ? "border-primary" : ""} bg-white z-10 relative`}>
                 <CardHeader>
                   <CardTitle>{plan.title}</CardTitle>
                   <CardDescription>{plan.description}</CardDescription>
