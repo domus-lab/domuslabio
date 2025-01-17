@@ -29,7 +29,7 @@ export const Offering = () => {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-20">
       <div className="container px-4 mx-auto">
         <h2 className="text-4xl mb-4 text-center font-bold">
           Start your project today

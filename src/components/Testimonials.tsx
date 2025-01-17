@@ -20,7 +20,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-20">
       <div className="container">
         <h2 className="text-4xl font-bold mb-4 text-center">What Clients Say</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">

@@ -7,7 +7,7 @@ export const Pricing = () => {
     {
       title: "MVP Start-up",
       price: "$2,999",
-      period: "",
+      period: "month",
       description: "For early stage founders looking to launch their first MVP",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
@@ -20,7 +20,7 @@ export const Pricing = () => {
     {
       title: "Growth",
       price: "$6,999",
-      period: "",
+      period: "month",
       description: "For founders with existing projects and ready to scale",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
@@ -45,7 +45,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="py-12" id="pricing">
+    <section className="py-32" id="pricing">
       <div className="container px-8 md:px-16">
         <div className="bg-gradient-to-r from-[#accbee] to-[#e7f0fd] rounded-xl p-8 md:p-16">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Pricing</h2>
@@ -67,7 +67,7 @@ export const Pricing = () => {
                   <span className="text-sm text-gray-500 mb-1 block">Starting from</span>
                   <div className="mt-4 mb-6">
                     <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
-                    {plan.period && <span className="text-gray-600 ml-2">{plan.period}</span>}
+                    {plan.period && <span className="text-gray-600 ml-2">/ {plan.period}</span>}
                   </div>
                   <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
