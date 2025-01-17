@@ -23,7 +23,7 @@ export default {
         cursive: ['Dancing Script', 'cursive'],
       },
       fontWeight: {
-        light: '200',
+        light: '100',
       },
       colors: {
         border: "hsl(var(--border))",
