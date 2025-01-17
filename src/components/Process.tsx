@@ -44,20 +44,39 @@ export const Process = () => {
             const isEven = (index + 1) % 2 === 0;
             
             return (
-              <div key={step.number} className="relative flex items-start mb-12 last:mb-0">
+              <div key={step.number} className="relative flex items-start mb-24 last:mb-0">
                 {/* Connecting line to next step */}
                 {index < steps.length - 1 && (
-                  <div 
-                    className={`absolute w-0.5 bg-primary/20 ${
-                      isEven 
-                        ? 'left-8 -bottom-12 h-12 md:left-1/2 md:-translate-x-px' 
-                        : 'left-8 -bottom-12 h-12 md:left-1/2 md:-translate-x-px'
-                    }`}
-                  />
+                  <div className="absolute">
+                    {/* For odd numbered steps (going to even) */}
+                    {!isEven && (
+                      <svg className="absolute -right-[200px] top-8 w-[200px] h-[100px]" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                          d="M0 0 C50 0, 50 0, 100 50 C150 100, 150 100, 200 100" 
+                          stroke="currentColor" 
+                          className="text-primary/20"
+                          strokeWidth="2"
+                          fill="none"
+                        />
+                      </svg>
+                    )}
+                    {/* For even numbered steps (going to odd) */}
+                    {isEven && (
+                      <svg className="absolute -left-[200px] top-8 w-[200px] h-[100px]" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                          d="M200 0 C150 0, 150 0, 100 50 C50 100, 50 100, 0 100" 
+                          stroke="currentColor" 
+                          className="text-primary/20"
+                          strokeWidth="2"
+                          fill="none"
+                        />
+                      </svg>
+                    )}
+                  </div>
                 )}
                 
                 {/* Content wrapper */}
-                <div className={`w-full flex ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                <div className={`w-full flex ${isEven ? 'md:flex-row-reverse justify-end' : 'md:flex-row'}`}>
                   {/* Number circle */}
                   <div className="flex-none relative z-10">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
@@ -68,7 +87,7 @@ export const Process = () => {
                   </div>
                   
                   {/* Text content */}
-                  <div className={`flex-1 pt-3 px-8 ${
+                  <div className={`flex-1 pt-3 ${
                     isEven 
                       ? 'md:text-right md:pr-8 md:pl-24' 
                       : 'md:text-left md:pl-8 md:pr-24'
