@@ -50,7 +50,7 @@ export const Process = () => {
           </p>
           <div className="relative max-w-2xl mx-auto">
             {/* Central timeline line with gradient fade */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-transparent via-[#e6e9f0] to-transparent" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-transparent via-[#2A2A2A] to-transparent opacity-20" />
             
             {steps.map((step, index) => (
               <div key={step.number} className="relative flex items-center mb-16 last:mb-0">
