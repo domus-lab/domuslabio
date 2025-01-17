@@ -1,8 +1,6 @@
 import * as React from "react";
 
-import { cn } from "@/lib/utils";
-
-const Projects = () => {
+export const Projects = () => {
   const projects = [
     {
       title: "Project One",
