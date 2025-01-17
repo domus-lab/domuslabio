@@ -8,7 +8,7 @@ export const TopMenu = () => {
   };
 
   return (
-    <div className="fixed top-8 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg p-2 z-50">
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg p-2 z-50">
       <div className="flex items-center gap-6 px-4">
         <Button
           variant="ghost"
