@@ -17,10 +17,10 @@ export const TopMenu = () => {
       <div className="flex items-center gap-6 px-4">
         <Button
           variant="ghost"
-          onClick={() => scrollToSection("process")}
+          onClick={() => scrollToSection("offering")}
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
-          Process
+          Offering
         </Button>
         <Button
           variant="ghost"
@@ -28,6 +28,13 @@ export const TopMenu = () => {
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
           Work
+        </Button>
+        <Button
+          variant="ghost"
+          onClick={() => scrollToSection("process")}
+          className="text-black hover:bg-transparent hover:text-gray-600"
+        >
+          Process
         </Button>
         <Button
           variant="ghost"
