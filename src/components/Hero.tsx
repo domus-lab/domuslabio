@@ -49,7 +49,7 @@ export const Hero = () => {
           From idea to product,
           <br />
           <span 
-            className="inline-block transition-all duration-500 mt-4"
+            className="inline-block transition-all duration-500 mt-4 font-extrabold"
             style={{ 
               backgroundImage: words[currentWordIndex].color,
               WebkitBackgroundClip: 'text',
@@ -66,7 +66,7 @@ export const Hero = () => {
         </p>
         <Button
           size="lg"
-          className="bg-white text-[#1a1f2c] hover:bg-gray-100 transition-colors"
+          className="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-none transition-all duration-300 transform hover:scale-105"
         >
           <Calendar className="w-4 h-4 mr-2" />
           Book a call
