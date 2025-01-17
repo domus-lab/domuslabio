@@ -63,8 +63,9 @@ export const Pricing = () => {
                 } bg-white z-10 relative flex flex-col`}
               >
                 <CardHeader>
-                  <CardTitle className="text-gray-800">{plan.title}</CardTitle>
-                  <div className="mt-4 mb-2">
+                  <CardTitle className="text-gray-800 mb-6">{plan.title}</CardTitle>
+                  <span className="text-sm text-gray-500 mb-1 block">Starting from</span>
+                  <div className="mt-4 mb-6">
                     <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
                     {plan.period && <span className="text-gray-600 ml-2">/ {plan.period}</span>}
                   </div>
@@ -88,8 +89,9 @@ export const Pricing = () => {
                         ? "bg-[#0a0a0a] hover:bg-[#222222] text-white" 
                         : "bg-[#222222] hover:bg-[#333333] text-white"
                     }`}
+                    onClick={() => window.open('https://cal.com/juan-luis-gv-swcapy/30min', '_blank')}
                   >
-                    {index === 2 ? "Contact Sales" : "Get Started"}
+                    Connect with us
                   </Button>
                 </CardContent>
               </Card>
