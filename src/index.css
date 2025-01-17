@@ -51,8 +51,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light;
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 200;
     background-color: #0a0a0a;
     cursor: default;
   }
