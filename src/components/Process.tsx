@@ -5,7 +5,7 @@ export const Process = () => {
     {
       number: "01",
       title: "Consultation call",
-      description: "We discuss your vision, goals, and requirements",
+      description: "We discuss your vision, goals, and requirements. No commitments!",
       icon: Users,
     },
     {
@@ -22,13 +22,13 @@ export const Process = () => {
     },
     {
       number: "04",
-      title: "Weekly sprints",
+      title: "Development Sprints",
       description: "Regular development cycles with continuous feedback",
       icon: Repeat2,
     },
     {
       number: "05",
-      title: "Release",
+      title: "Easy release process",
       description: "We deploy your solution and ensure smooth operation",
       icon: Rocket,
     },
@@ -50,7 +50,7 @@ export const Process = () => {
           </p>
           <div className="relative max-w-2xl mx-auto">
             {/* Central timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#333333]" />
             
             {steps.map((step, index) => (
               <div key={step.number} className="relative flex items-center mb-16 last:mb-0">
