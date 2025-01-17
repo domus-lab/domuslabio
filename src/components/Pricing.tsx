@@ -5,7 +5,7 @@ export const Pricing = () => {
   return (
     <section className="py-20" id="pricing">
       <div className="container px-4">
-        <div className="bg-[#2A2A2A] rounded-xl p-8 md:p-12">
+        <div className="bg-[#1a1f3d] rounded-xl p-8 md:p-12">
           <h2 className="text-4xl font-bold mb-4 text-center">Pricing</h2>
           <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
             Transparent pricing options tailored to your project's needs and scale.
