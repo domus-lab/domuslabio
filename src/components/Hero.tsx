@@ -7,10 +7,10 @@ export const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   
   const words = [
-    { text: "fast", color: "#D3E4FD" },      // Soft Blue
-    { text: "reliable", color: "#F2FCE2" },  // Soft Green
-    { text: "secure", color: "#E5DEFF" },    // Soft Purple
-    { text: "worry-free", color: "#F1F0FB" } // Soft Gray
+    { text: "fast", color: "#8B5CF6" },      // Vivid Purple
+    { text: "reliable", color: "#0EA5E9" },  // Ocean Blue
+    { text: "secure", color: "#F97316" },    // Bright Orange
+    { text: "worry-free", color: "#D946EF" } // Magenta Pink
   ];
 
   useEffect(() => {
@@ -46,12 +46,13 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-          From idea to product,{" "}
+          From idea to product,
+          <br />
           <span 
-            className="inline-block transition-all duration-500"
+            className="inline-block transition-all duration-500 mt-4"
             style={{ 
               color: words[currentWordIndex].color,
-              textShadow: '0 0 1px rgba(0,0,0,0.1)'
+              textShadow: '0 0 20px rgba(255,255,255,0.1)'
             }}
           >
             {words[currentWordIndex].text}
