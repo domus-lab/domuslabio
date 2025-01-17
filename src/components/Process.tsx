@@ -43,9 +43,9 @@ export const Process = () => {
   return (
     <section className="py-20">
       <div className="container px-4">
-        <div className="bg-[#1a1f3d] rounded-xl p-8 md:p-12">
-          <h2 className="text-4xl font-bold mb-4 text-center">Our Process</h2>
-          <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+        <div className="bg-[#e8e9ff] rounded-xl p-8 md:p-12">
+          <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Our Process</h2>
+          <p className="text-lg text-gray-600 mb-16 text-center max-w-2xl mx-auto">
             A proven methodology that ensures successful project delivery and client satisfaction.
           </p>
           <div className="relative max-w-2xl mx-auto">
@@ -62,8 +62,8 @@ export const Process = () => {
                   <div className={`w-[calc(50%-2rem)] ${
                     index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'
                   }`}>
-                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
                   </div>
 
                   {/* Icon circle */}
