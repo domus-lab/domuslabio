@@ -23,7 +23,7 @@ export default {
         cursive: ['Dancing Script', 'cursive'],
       },
       fontWeight: {
-        light: '100',
+        light: '200',
         normal: '200',
         medium: '300',
       },
