@@ -40,34 +40,46 @@ export const Process = () => {
           A proven methodology that ensures successful project delivery and client satisfaction.
         </p>
         <div className="relative max-w-4xl mx-auto">
-          {/* Line connecting all points */}
-          <div className="absolute top-8 left-8 h-[calc(100%-4rem)] w-0.5 bg-primary/20 md:left-1/2 md:-translate-x-px" />
-          
-          {steps.map((step, index) => (
-            <div 
-              key={step.number}
-              className={`relative flex gap-8 mb-12 last:mb-0 items-start ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}
-            >
-              {/* Number and point */}
-              <div className="flex-none relative z-10">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
-                    {step.number}
+          {steps.map((step, index) => {
+            const isEven = (index + 1) % 2 === 0;
+            
+            return (
+              <div key={step.number} className="relative flex items-start mb-12 last:mb-0">
+                {/* Connecting line to next step */}
+                {index < steps.length - 1 && (
+                  <div 
+                    className={`absolute w-0.5 bg-primary/20 ${
+                      isEven 
+                        ? 'left-8 -bottom-12 h-12 md:left-1/2 md:-translate-x-px' 
+                        : 'left-8 -bottom-12 h-12 md:left-1/2 md:-translate-x-px'
+                    }`}
+                  />
+                )}
+                
+                {/* Content wrapper */}
+                <div className={`w-full flex ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                  {/* Number circle */}
+                  <div className="flex-none relative z-10">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                        {step.number}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Text content */}
+                  <div className={`flex-1 pt-3 px-8 ${
+                    isEven 
+                      ? 'md:text-right md:pr-8 md:pl-24' 
+                      : 'md:text-left md:pl-8 md:pr-24'
+                  }`}>
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
               </div>
-              
-              {/* Content */}
-              <div className={`flex-1 pt-3 ${
-                index % 2 === 0 ? 'md:pr-24' : 'md:pl-24'
-              }`}>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
