@@ -53,7 +53,7 @@ export const Projects = () => {
             <div 
               key={index} 
               className={cn(
-                "bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300",
+                "bg-[#222222] rounded-lg shadow-md overflow-hidden transition-all duration-300",
                 index > 2 && "animate-fade-in"
               )}
             >
