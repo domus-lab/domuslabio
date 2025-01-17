@@ -33,8 +33,9 @@ export const Offering = () => {
       <div className="container px-4 mx-auto">
         <h2 className="text-4xl mb-4 text-center">
           Start your project{" "}
-          <span className="relative inline-block font-bold">
-            today
+          <span className="relative inline-block font-extrabold">
+            <span className="relative z-10">today</span>
+            <span className="absolute inset-0 bg-purple-500/10 -skew-x-12 rounded transform translate-y-2"></span>
             <svg
               className="absolute -bottom-2 left-0 w-full"
               viewBox="0 0 100 20"
