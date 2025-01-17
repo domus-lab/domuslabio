@@ -15,7 +15,7 @@ export const Testimonials = () => {
     {
       name: "John P.",
       title: "CEO",
-      feedback: "We just started working with Juan and his team. Their solution is reduced our tech cost by 50% and improved our operations. Awesome work!",
+      feedback: "We just started working with Juan and his team. Their solution has reduced our tech cost by 50% and improved our operations. Awesome work!",
     },
   ];
 
