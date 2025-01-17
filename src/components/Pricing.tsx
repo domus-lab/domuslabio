@@ -32,7 +32,7 @@ export const Pricing = () => {
     },
     {
       title: "Enterprise",
-      price: "To be discussed",
+      price: "Contact us",
       period: null,
       description: "For enterprise looking to improve their operations and launch new products",
       features: [
