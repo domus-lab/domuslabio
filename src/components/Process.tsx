@@ -58,8 +58,12 @@ export const Process = () => {
                 <div className={`flex items-center w-full ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-row`}>
-                  {/* Icon circle - always on left for mobile */}
-                  <div className="relative z-10 shrink-0">
+                  {/* Icon circle - left for mobile, centered for desktop */}
+                  <div className={`relative z-10 shrink-0 ${
+                    index % 2 === 0 
+                      ? 'md:absolute md:left-1/2 md:-translate-x-1/2' 
+                      : 'md:absolute md:left-1/2 md:-translate-x-1/2'
+                  }`}>
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center">
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
                         {<step.icon size={20} />}
@@ -67,11 +71,11 @@ export const Process = () => {
                     </div>
                   </div>
 
-                  {/* Text content - always on right for mobile */}
+                  {/* Text content - always on right for mobile, alternating for desktop */}
                   <div className={`flex-1 pl-4 md:pl-0 ${
                     index % 2 === 0 
-                      ? 'md:text-right md:pr-8' 
-                      : 'md:text-left md:pl-8'
+                      ? 'md:text-right md:pr-16' 
+                      : 'md:text-left md:pl-16'
                   } text-left`}>
                     <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-gray-800">{step.title}</h3>
                     <p className="text-sm md:text-base text-gray-600">{step.description}</p>
