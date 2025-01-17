@@ -22,11 +22,6 @@ export default {
         sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
         cursive: ['Dancing Script', 'cursive'],
       },
-      fontWeight: {
-        light: '300',
-        normal: '400',
-        medium: '500',
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
