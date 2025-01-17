@@ -6,7 +6,9 @@ export const Pricing = () => {
   const pricingPlans = [
     {
       title: "MVP Start-up",
-      description: "Start your business building an MVP",
+      price: "$2,999",
+      period: "month",
+      description: "For early stage founders looking to launch their first MVP",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
         "Build Web and App using modern stack",
@@ -17,7 +19,9 @@ export const Pricing = () => {
     },
     {
       title: "Growth",
-      description: "Start your business building an MVP",
+      price: "$6,999",
+      period: "month",
+      description: "For founders with existing projects and ready to scale",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
         "Build Web and App using modern stack",
@@ -28,7 +32,9 @@ export const Pricing = () => {
     },
     {
       title: "Enterprise",
-      description: "Supporting existing enterprise business",
+      price: "To be discussed",
+      period: null,
+      description: "For enterprise looking to improve their operations and launch new products",
       features: [
         "Complete analysis of your ops",
         "Build digital solutions with modern stack",
@@ -58,6 +64,10 @@ export const Pricing = () => {
               >
                 <CardHeader>
                   <CardTitle className="text-gray-800">{plan.title}</CardTitle>
+                  <div className="mt-4 mb-2">
+                    <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
+                    {plan.period && <span className="text-gray-600 ml-2">/ {plan.period}</span>}
+                  </div>
                   <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
