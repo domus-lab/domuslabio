@@ -17,7 +17,7 @@ export const Projects = () => {
     {
       title: "Aeddix",
       description: "Aeddix provides cutting-edge IoT solutions, digital process automation, and smart sensors tailored for SMEs.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "/lovable-uploads/4ace3f6b-db75-4fbc-99a3-dd2275ff51f9.png",
       tags: ["Web", "Infrastructure", "Cost opt", "Fractional CTO"],
     },
     {
