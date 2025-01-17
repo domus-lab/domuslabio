@@ -31,12 +31,8 @@ export const Offering = () => {
   return (
     <section className="py-20">
       <div className="container px-4 mx-auto">
-        <h2 className="text-4xl mb-4 text-center">
-          Start your project{" "}
-          <span className="relative inline-block font-extrabold">
-            <span className="relative z-10">today</span>
-            <span className="absolute inset-0 bg-yellow-300/50 -skew-x-6 rounded transform translate-y-2"></span>
-          </span>
+        <h2 className="text-4xl mb-4 text-center font-bold">
+          Start your project today
         </h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
           Our team has built successful products for more than 10 startups and more than 15 years of experience.
