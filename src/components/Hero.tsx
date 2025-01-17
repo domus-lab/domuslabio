@@ -7,10 +7,10 @@ export const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   
   const words = [
-    { text: "fast", color: "#8B5CF6" },      // Vivid Purple
-    { text: "reliable", color: "#0EA5E9" },  // Ocean Blue
-    { text: "secure", color: "#F97316" },    // Bright Orange
-    { text: "worry-free", color: "#D946EF" } // Magenta Pink
+    { text: "fast", color: "linear-gradient(90deg, #8B5CF6 0%, #D946EF 100%)" },      // Vivid Purple to Pink
+    { text: "reliable", color: "linear-gradient(90deg, #0EA5E9 0%, #38BDF8 100%)" },  // Ocean Blue to Sky
+    { text: "secure", color: "linear-gradient(90deg, #F97316 0%, #FB923C 100%)" },    // Bright Orange to Light
+    { text: "worry-free", color: "linear-gradient(90deg, #D946EF 0%, #F472B6 100%)" } // Magenta Pink to Rose
   ];
 
   useEffect(() => {
@@ -51,7 +51,10 @@ export const Hero = () => {
           <span 
             className="inline-block transition-all duration-500 mt-4"
             style={{ 
-              color: words[currentWordIndex].color,
+              backgroundImage: words[currentWordIndex].color,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
               textShadow: '0 0 20px rgba(255,255,255,0.1)'
             }}
           >
