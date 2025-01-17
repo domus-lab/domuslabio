@@ -1,34 +1,21 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
-import { Card, CardContent } from "./ui/card";
-
-const testimonials = [
-  {
-    image: "/placeholder.svg",
-    name: "John Doe",
-    title: "CEO at TechCorp",
-    review: "Working with domuslab.io was a game-changer for our business. Their expertise and dedication helped us launch our MVP in record time.",
-  },
-  {
-    image: "/placeholder.svg",
-    name: "Jane Smith",
-    title: "Founder at StartupX",
-    review: "The team's attention to detail and technical expertise is outstanding. They delivered exactly what we needed, on time and within budget.",
-  },
-  {
-    image: "/placeholder.svg",
-    name: "Mike Johnson",
-    title: "CTO at InnovateCo",
-    review: "Their agile approach and weekly feedback sessions kept us informed and confident throughout the development process.",
-  },
-];
+import React from "react";
 
 export const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "John Doe",
+      feedback: "This team transformed our vision into reality. Highly recommend!",
+    },
+    {
+      name: "Jane Smith",
+      feedback: "Professional and dedicated. Our project was a success!",
+    },
+    {
+      name: "Alice Johnson",
+      feedback: "Exceptional service and support throughout the process.",
+    },
+  ];
+
   return (
     <section className="py-20">
       <div className="container">
@@ -36,30 +23,14 @@ export const Testimonials = () => {
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
           Don't just take our word for it - hear from the businesses we've helped succeed.
         </p>
-        <Carousel className="w-full max-w-4xl mx-auto">
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex flex-col items-center text-center">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full mb-4"
-                      />
-                      <h3 className="font-semibold">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-4">{testimonial.title}</p>
-                      <p className="text-sm line-clamp-4">{testimonial.review}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-lg italic">"{testimonial.feedback}"</p>
+              <p className="mt-4 font-bold">{testimonial.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

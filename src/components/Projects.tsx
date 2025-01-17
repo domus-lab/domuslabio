@@ -1,25 +1,26 @@
-import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import * as React from "react";
 
-const projects = [
-  {
-    logo: "/placeholder.svg",
-    name: "Project Alpha",
-    description: "A revolutionary SaaS platform for business automation",
-  },
-  {
-    logo: "/placeholder.svg",
-    name: "Project Beta",
-    description: "AI-powered analytics dashboard for e-commerce",
-  },
-  {
-    logo: "/placeholder.svg",
-    name: "Project Gamma",
-    description: "Mobile-first marketplace application",
-  },
-];
+import { cn } from "@/lib/utils";
 
-export const Projects = () => {
+const Projects = () => {
+  const projects = [
+    {
+      title: "Project One",
+      description: "Description of project one.",
+      image: "/path/to/image1.jpg",
+    },
+    {
+      title: "Project Two",
+      description: "Description of project two.",
+      image: "/path/to/image2.jpg",
+    },
+    {
+      title: "Project Three",
+      description: "Description of project three.",
+      image: "/path/to/image3.jpg",
+    },
+  ];
+
   return (
     <section className="py-20" id="work">
       <div className="container">
@@ -28,22 +29,17 @@ export const Projects = () => {
           Discover how we've helped businesses transform their ideas into successful digital products.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <Card key={project.name} className="group cursor-pointer hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <img src={project.logo} alt={project.name} className="h-12 w-auto mb-4" />
-                <CardTitle className="flex items-center justify-between">
-                  {project.name}
-                  <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{project.description}</CardDescription>
-              </CardContent>
-            </Card>
+          {projects.map((project, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4" />
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-muted-foreground">{project.description}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+
+export default Projects;
