@@ -52,8 +52,8 @@ export const Pricing = () => {
                 key={index} 
                 className={`${
                   index === 1 
-                    ? "border-primary shadow-lg transform -translate-y-4 hover:-translate-y-6 transition-all duration-300" 
-                    : "hover:-translate-y-2 transition-transform duration-300"
+                    ? "border-2 border-[#222222] shadow-lg transform -translate-y-4 hover:-translate-y-6 transition-all duration-300" 
+                    : "border-0 hover:-translate-y-2 transition-transform duration-300"
                 } bg-white z-10 relative`}
               >
                 <CardHeader>
