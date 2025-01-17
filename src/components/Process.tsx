@@ -49,8 +49,8 @@ export const Process = () => {
             A proven methodology that ensures successful project delivery and client satisfaction.
           </p>
           <div className="relative max-w-2xl mx-auto">
-            {/* Central timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#333333]" />
+            {/* Central timeline line with gradient fade */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-transparent via-[#e6e9f0] to-transparent" />
             
             {steps.map((step, index) => (
               <div key={step.number} className="relative flex items-center mb-16 last:mb-0">
