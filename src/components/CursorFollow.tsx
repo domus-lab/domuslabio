@@ -18,9 +18,9 @@ export const CursorFollow = () => {
         
         if (distance < radius) {
           const opacity = 1 - (distance / radius);
-          (dot as HTMLElement).style.opacity = `${0.05 + (opacity * 0.3)}`;
+          (dot as HTMLElement).style.opacity = `${0.15 + (opacity * 0.3)}`;
         } else {
-          (dot as HTMLElement).style.opacity = '0.05';
+          (dot as HTMLElement).style.opacity = '0.15';
         }
       });
     };
@@ -33,7 +33,7 @@ export const CursorFollow = () => {
 
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const spacing = 24; // Match the grid size from CSS
+      const spacing = 12; // Reduced from 24 to 12 (50% reduction)
 
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
@@ -41,7 +41,7 @@ export const CursorFollow = () => {
           dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-white rounded-full transition-opacity duration-200';
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.05';
+          dot.style.opacity = '0.15'; // Increased from 0.05 to 0.15 for brighter base state
           container.appendChild(dot);
         }
       }
