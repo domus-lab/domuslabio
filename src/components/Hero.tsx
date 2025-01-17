@@ -1,9 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Hero = () => {
   const heroRef = useRef<HTMLElement>(null);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  
+  const words = [
+    { text: "fast", color: "#D3E4FD" },      // Soft Blue
+    { text: "reliable", color: "#F2FCE2" },  // Soft Green
+    { text: "secure", color: "#E5DEFF" },    // Soft Purple
+    { text: "worry-free", color: "#F1F0FB" } // Soft Gray
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -30,7 +46,16 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-          From idea to product, <span className="inline-block animate-[style-morph_3s_ease-in-out_infinite]">fast</span> and reliable.
+          From idea to product,{" "}
+          <span 
+            className="inline-block transition-all duration-500"
+            style={{ 
+              color: words[currentWordIndex].color,
+              textShadow: '0 0 1px rgba(0,0,0,0.1)'
+            }}
+          >
+            {words[currentWordIndex].text}
+          </span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
           Turning ideas into reality, fast, reliable and securely.
