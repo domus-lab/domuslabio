@@ -10,7 +10,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "Gronda",
-      description: "Largest chef platform in the world. With +2 Mill users they connect chef through in inspiration and content.",
+      description: "Largest chef platform in the world with +2 Million users. They connect chef through in inspiration and content.",
       image: "/lovable-uploads/a53372c0-6dc7-4687-a62a-883e941fb865.png",
       tags: ["App", "Web", "Infrastructure", "Cost opt", "Hiring", "Fractional CTO"],
       inProgress: false,
@@ -24,7 +24,7 @@ export const Projects = () => {
     },
     {
       title: "Alex Powell Racing",
-      description: "Mercedes junior driver. We support him building in less than 1 week his professional website with live updates.",
+      description: "Mercedes-AMG PETRONAS F1 junior driver. We built his professional website with live updates.",
       image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
       tags: ["Web", "Automations"],
       inProgress: true,
@@ -102,12 +102,12 @@ export const Projects = () => {
         </div>
         
         {!showMore && (
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center relative z-10">
             <Button
               variant="outline"
               size="lg"
               onClick={() => setShowMore(true)}
-              className="group"
+              className="group bg-[#222222] hover:bg-[#2A2A2A]"
             >
               <ChevronDown className="mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1" />
               Show More Projects
