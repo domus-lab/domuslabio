@@ -84,12 +84,33 @@ export default {
           "0%": { fontFamily: "Poppins", transform: "translateX(0)" },
           "50%": { fontFamily: "Dancing Script", transform: "translateX(2px)" },
           "100%": { fontFamily: "Poppins", transform: "translateX(0)" },
+        },
+        "timeline-flow": {
+          "0%": { 
+            backgroundImage: "linear-gradient(to bottom, transparent 0%, #2A2A2A 0%, #2A2A2A 10%, transparent 30%)"
+          },
+          "20%": {
+            backgroundImage: "linear-gradient(to bottom, transparent 10%, #2A2A2A 20%, #2A2A2A 30%, transparent 50%)"
+          },
+          "40%": {
+            backgroundImage: "linear-gradient(to bottom, transparent 30%, #2A2A2A 40%, #2A2A2A 50%, transparent 70%)"
+          },
+          "60%": {
+            backgroundImage: "linear-gradient(to bottom, transparent 50%, #2A2A2A 60%, #2A2A2A 70%, transparent 90%)"
+          },
+          "80%": {
+            backgroundImage: "linear-gradient(to bottom, transparent 70%, #2A2A2A 80%, #2A2A2A 90%, transparent 100%)"
+          },
+          "100%": {
+            backgroundImage: "linear-gradient(to bottom, transparent 90%, #2A2A2A 100%, #2A2A2A 100%, transparent 100%)"
+          }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        "timeline-flow": "timeline-flow 7s linear infinite",
       },
     },
   },
