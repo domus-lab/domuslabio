@@ -33,7 +33,7 @@ export const CursorFollow = () => {
 
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const spacing = 12; // Reduced from 24 to 12 (50% reduction)
+      const spacing = 15; // Increased from 12 to 15 (25% increase)
 
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
@@ -41,7 +41,7 @@ export const CursorFollow = () => {
           dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-white rounded-full transition-opacity duration-200';
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.15'; // Increased from 0.05 to 0.15 for brighter base state
+          dot.style.opacity = '0.15';
           container.appendChild(dot);
         }
       }
