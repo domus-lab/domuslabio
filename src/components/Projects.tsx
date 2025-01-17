@@ -10,7 +10,7 @@ export const Projects = () => {
     {
       title: "Gronda",
       description: "Largest chef platform in the world. With +2 Mill users they connect chef through in inspiration and content.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      image: "/lovable-uploads/a53372c0-6dc7-4687-a62a-883e941fb865.png",
     },
     {
       title: "Aeddix",
@@ -44,7 +44,7 @@ export const Projects = () => {
   return (
     <section className="py-20" id="work">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-4 text-center">Some of our last projects</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Last projects</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
           Discover how we've helped businesses transform their ideas into successful digital products.
         </p>
