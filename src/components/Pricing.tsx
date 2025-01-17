@@ -50,8 +50,8 @@ export const Pricing = () => {
             {pricingPlans.map((plan, index) => (
               <Card key={index} className={`${index === 1 ? "border-primary" : ""} bg-white z-10 relative`}>
                 <CardHeader>
-                  <CardTitle>{plan.title}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
+                  <CardTitle className="text-gray-800">{plan.title}</CardTitle>
+                  <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
