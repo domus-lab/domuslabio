@@ -67,7 +67,7 @@ export const Pricing = () => {
                   <span className="text-sm text-gray-500 mb-1 block">Starting from</span>
                   <div className="mt-4 mb-6">
                     <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
-                    {plan.period && <span className="text-gray-600 ml-2">/ {plan.period}</span>}
+                    {plan.period && <span className="text-gray-600 ml-2">{plan.period}</span>}
                   </div>
                   <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
