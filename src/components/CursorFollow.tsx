@@ -33,7 +33,7 @@ export const CursorFollow = () => {
 
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const spacing = 16; // Changed from 24 to 16 to make points closer together
+      const spacing = 24; // Match the grid size from CSS
 
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
