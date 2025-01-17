@@ -14,33 +14,33 @@ export const FloatingMenu = () => {
           variant="ghost"
           size="icon"
           onClick={() => scrollToSection("top")}
-          className="rounded-full"
+          className="rounded-full text-black"
         >
-          <Home className="h-5 w-5" />
+          <Home className="h-5 w-5 text-black" />
         </Button>
         <Button
           variant="ghost"
           size="icon"
           onClick={() => scrollToSection("work")}
-          className="rounded-full"
+          className="rounded-full text-black"
         >
-          <Briefcase className="h-5 w-5" />
+          <Briefcase className="h-5 w-5 text-black" />
         </Button>
         <Button
           variant="ghost"
           size="icon"
           onClick={() => scrollToSection("pricing")}
-          className="rounded-full"
+          className="rounded-full text-black"
         >
-          <DollarSign className="h-5 w-5" />
+          <DollarSign className="h-5 w-5 text-black" />
         </Button>
         <Button
           variant="ghost"
           size="icon"
           onClick={() => scrollToSection("contact")}
-          className="rounded-full"
+          className="rounded-full text-black"
         >
-          <Phone className="h-5 w-5" />
+          <Phone className="h-5 w-5 text-black" />
         </Button>
       </div>
     </div>
