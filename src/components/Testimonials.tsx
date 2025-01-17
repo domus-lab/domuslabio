@@ -3,16 +3,19 @@ import React from "react";
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: "John Doe",
-      feedback: "This team transformed our vision into reality. Highly recommend!",
+      name: "Fred B.",
+      title: "CEO",
+      feedback: "Working with this team was transformative. They helped us reduce our infrastructure costs by 30% and delivered a stunning website redesign in record time. Their expertise and quick turnaround made a significant impact on our business.",
     },
     {
-      name: "Jane Smith",
-      feedback: "Professional and dedicated. Our project was a success!",
+      name: "Jim U.",
+      title: "Head of Product",
+      feedback: "Their expertise in building scalable infrastructure was crucial for our success. Thanks to their work, our product maintained 100% reliability, which was instrumental in securing our funding round. They truly understand what it takes to build enterprise-grade solutions.",
     },
     {
-      name: "Alice Johnson",
-      feedback: "Exceptional service and support throughout the process.",
+      name: "John P.",
+      title: "CEO",
+      feedback: "We just started working with Juan and his team. Their solution is reduced our tech cost by 50% and improved our operations. Awesome work!",
     },
   ];
 
@@ -25,9 +28,15 @@ export const Testimonials = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#2A2A2A] p-6 rounded-lg shadow-md">
-              <p className="text-lg italic">"{testimonial.feedback}"</p>
-              <p className="mt-4 font-bold">{testimonial.name}</p>
+            <div 
+              key={index} 
+              className="bg-[#2A2A2A] p-6 rounded-lg shadow-md z-10 relative hover:scale-105 transition-transform duration-300"
+            >
+              <p className="text-lg italic mb-6">"{testimonial.feedback}"</p>
+              <div>
+                <p className="font-bold text-lg">{testimonial.name}</p>
+                <p className="text-muted-foreground">{testimonial.title}</p>
+              </div>
             </div>
           ))}
         </div>
