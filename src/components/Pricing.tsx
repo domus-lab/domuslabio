@@ -45,9 +45,9 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="py-32" id="pricing">
-      <div className="container px-8 md:px-16">
-        <div className="bg-gradient-to-r from-[#accbee] to-[#e7f0fd] rounded-xl p-8 md:p-16">
+    <section className="py-40" id="pricing">
+      <div className="container px-12 md:px-24">
+        <div className="bg-gradient-to-r from-[#accbee] to-[#e7f0fd] rounded-xl p-12 md:p-20">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Pricing</h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
             Transparent pricing options tailored to your project's needs and scale.
