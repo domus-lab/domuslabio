@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
         cursive: ['Dancing Script', 'cursive'],
       },
       colors: {
@@ -76,9 +76,9 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "style-morph": {
-          "0%": { fontFamily: "Inter", transform: "translateX(0)" },
+          "0%": { fontFamily: "Poppins", transform: "translateX(0)" },
           "50%": { fontFamily: "Dancing Script", transform: "translateX(2px)" },
-          "100%": { fontFamily: "Inter", transform: "translateX(0)" },
+          "100%": { fontFamily: "Poppins", transform: "translateX(0)" },
         }
       },
       animation: {
