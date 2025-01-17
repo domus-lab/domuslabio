@@ -5,7 +5,10 @@ export const Pricing = () => {
   return (
     <section className="py-20 bg-slate-50" id="pricing">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Pricing</h2>
+        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+          Transparent pricing options tailored to your project's needs and scale.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card>
             <CardHeader>

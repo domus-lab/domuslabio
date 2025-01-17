@@ -22,9 +22,12 @@ export const Offering = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container px-4 mx-auto">
-        <h2 className="text-4xl font-bold mb-16">
+        <h2 className="text-4xl font-bold mb-4 text-center">
           Start building worry free.
         </h2>
+        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+          We provide everything you need to turn your vision into a successful digital product.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <OfferingItem
             icon={Award}

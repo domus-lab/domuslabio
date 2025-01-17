@@ -32,7 +32,10 @@ export const Testimonials = () => {
   return (
     <section className="py-20">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12">What Clients Say</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">What Clients Say</h2>
+        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+          Don't just take our word for it - hear from the businesses we've helped succeed.
+        </p>
         <Carousel className="w-full max-w-4xl mx-auto">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (

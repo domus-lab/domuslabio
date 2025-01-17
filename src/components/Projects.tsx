@@ -23,7 +23,10 @@ export const Projects = () => {
   return (
     <section className="py-20" id="work">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12">Our Projects</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Projects</h2>
+        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+          Discover how we've helped businesses transform their ideas into successful digital products.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <Card key={project.name} className="group cursor-pointer hover:shadow-lg transition-shadow">
