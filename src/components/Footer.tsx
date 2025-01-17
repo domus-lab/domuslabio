@@ -1,32 +1,14 @@
 export const Footer = () => {
   return (
-    <footer className="py-12 bg-slate-900 text-white">
+    <footer className="py-12 relative z-10 bg-gray-900">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">domuslab.io</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">domuslab.io</h3>
             <p className="text-slate-400">Dream. Build. Launch.</p>
           </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Services</h4>
-            <ul className="space-y-2 text-slate-400">
-              <li>MVP Development</li>
-              <li>Web Applications</li>
-              <li>Mobile Apps</li>
-              <li>Custom Solutions</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Company</h4>
-            <ul className="space-y-2 text-slate-400">
-              <li>About Us</li>
-              <li>Projects</li>
-              <li>Process</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
+          <div className="text-right">
+            <h4 className="text-lg font-bold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-slate-400">
               <li>hello@domuslab.io</li>
               <li>Book a Call</li>
