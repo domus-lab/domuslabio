@@ -24,6 +24,8 @@ export default {
       },
       fontWeight: {
         light: '100',
+        normal: '200',
+        medium: '300',
       },
       colors: {
         border: "hsl(var(--border))",

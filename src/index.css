@@ -51,10 +51,18 @@
   }
 
   body {
-    @apply bg-background text-foreground font-light;
+    @apply bg-background text-foreground;
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     font-weight: 100;
     background-color: #0a0a0a;
     cursor: default;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+  }
+
+  p, span, div {
+    font-weight: 100;
   }
 }
