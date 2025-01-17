@@ -30,15 +30,26 @@ export const Hero = () => {
         background: `radial-gradient(
           circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
           #1a1f2c 0%,
-          #222832 25%,
+          #1a1f2c 35%,
           #161920 50%,
-          #0c0e13 75%,
+          #0c0e13 65%,
           #000000 100%
         )`,
-        transition: 'background 0.15s ease'
+        transition: 'background 0.3s ease',
+        backgroundImage: `
+          radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            #1a1f2c 0%,
+            #1a1f2c 35%,
+            #161920 50%,
+            #0c0e13 65%,
+            #000000 100%
+          ),
+          radial-gradient(circle, #333333 1px, transparent 1px)
+        `,
+        backgroundSize: 'cover, 24px 24px'
       }}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05),rgba(255,255,255,0))] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
           From idea to product, fast and reliable.
