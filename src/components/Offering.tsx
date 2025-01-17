@@ -22,7 +22,7 @@ export const Offering = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container px-4 mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-4xl font-bold mb-16">
           Start building worry free.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

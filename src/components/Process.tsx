@@ -35,7 +35,7 @@ export const Process = () => {
   return (
     <section className="py-20 bg-slate-50">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12 text-center">Our Process</h2>
+        <h2 className="text-4xl font-bold mb-12">Our Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step) => (
             <div key={step.number} className="flex gap-4 p-6 bg-white rounded-lg shadow-sm">

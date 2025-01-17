@@ -23,7 +23,7 @@ export const Projects = () => {
   return (
     <section className="py-20" id="work">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12 text-center">Our Projects</h2>
+        <h2 className="text-4xl font-bold mb-12">Our Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <Card key={project.name} className="group cursor-pointer hover:shadow-lg transition-shadow">
