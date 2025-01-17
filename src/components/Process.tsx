@@ -41,7 +41,7 @@ export const Process = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="process">
       <div className="container px-4">
         <div className="bg-gradient-to-br from-[#e6e9f0] to-[#eef1f5] rounded-xl p-8 md:p-12">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Our Process</h2>
