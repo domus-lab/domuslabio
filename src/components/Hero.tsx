@@ -41,7 +41,7 @@ export const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">

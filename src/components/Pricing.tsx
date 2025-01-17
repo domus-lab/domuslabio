@@ -45,7 +45,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="py-32" id="pricing">
+    <section className="py-12" id="pricing">
       <div className="container px-8 md:px-16">
         <div className="bg-gradient-to-r from-[#accbee] to-[#e7f0fd] rounded-xl p-8 md:p-16">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Pricing</h2>
