@@ -23,7 +23,7 @@ export const Projects = () => {
     {
       title: "Alex Powell Racing",
       description: "Mercedes junior driver. We support him building in less than 1 week his professional website with live updates.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
       tags: ["Web", "Automations"],
     },
     {
