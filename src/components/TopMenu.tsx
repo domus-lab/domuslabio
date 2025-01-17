@@ -1,3 +1,4 @@
+import { Home, Briefcase, DollarSign, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const TopMenu = () => {
@@ -14,6 +15,7 @@ export const TopMenu = () => {
           onClick={() => scrollToSection("process")}
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
+          <Home className="h-5 w-5 mr-2" />
           Process
         </Button>
         <Button
@@ -21,6 +23,7 @@ export const TopMenu = () => {
           onClick={() => scrollToSection("work")}
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
+          <Briefcase className="h-5 w-5 mr-2" />
           Work
         </Button>
         <Button
@@ -28,12 +31,14 @@ export const TopMenu = () => {
           onClick={() => scrollToSection("pricing")}
           className="text-black hover:bg-transparent hover:text-gray-600"
         >
+          <DollarSign className="h-5 w-5 mr-2" />
           Pricing
         </Button>
         <Button
           onClick={() => scrollToSection("contact")}
           className="bg-black text-white rounded-full hover:bg-gray-800"
         >
+          <Phone className="h-5 w-5 mr-2" />
           Connect
         </Button>
       </div>

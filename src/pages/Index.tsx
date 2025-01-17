@@ -5,7 +5,6 @@ import { Process } from "@/components/Process";
 import { Testimonials } from "@/components/Testimonials";
 import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
-import { FloatingMenu } from "@/components/FloatingMenu";
 import { TopMenu } from "@/components/TopMenu";
 import { CursorFollow } from "@/components/CursorFollow";
 
@@ -21,7 +20,6 @@ const Index = () => {
       <Testimonials />
       <Pricing />
       <Footer />
-      <FloatingMenu />
     </main>
   );
 };
