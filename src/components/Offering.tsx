@@ -35,20 +35,7 @@ export const Offering = () => {
           Start your project{" "}
           <span className="relative inline-block font-extrabold">
             <span className="relative z-10">today</span>
-            <span className="absolute inset-0 bg-purple-500/10 -skew-x-12 rounded transform translate-y-2"></span>
-            <svg
-              className="absolute -bottom-2 left-0 w-full"
-              viewBox="0 0 100 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 15 Q 25 5, 50 15 T 100 15"
-                fill="none"
-                stroke="#9b87f5"
-                strokeWidth="4"
-                strokeLinecap="round"
-              />
-            </svg>
+            <span className="absolute inset-0 bg-yellow-300/50 -skew-x-6 rounded transform translate-y-2"></span>
           </span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
