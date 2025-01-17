@@ -6,10 +6,12 @@ import { Testimonials } from "@/components/Testimonials";
 import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
 import { FloatingMenu } from "@/components/FloatingMenu";
+import { CursorFollow } from "@/components/CursorFollow";
 
 const Index = () => {
   return (
-    <main className="min-h-screen" id="top">
+    <main className="min-h-screen relative overflow-hidden" id="top">
+      <CursorFollow />
       <Hero />
       <Offering />
       <Projects />
