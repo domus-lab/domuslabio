@@ -7,7 +7,7 @@ export const Pricing = () => {
     {
       title: "MVP Start-up",
       price: "$2,999",
-      period: "month",
+      period: "",
       description: "For early stage founders looking to launch their first MVP",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
@@ -20,7 +20,7 @@ export const Pricing = () => {
     {
       title: "Growth",
       price: "$6,999",
-      period: "month",
+      period: "",
       description: "For founders with existing projects and ready to scale",
       features: [
         "Complete MVP development <i>usually</i> in less than a month",
