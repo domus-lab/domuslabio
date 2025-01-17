@@ -44,7 +44,7 @@ export const Hero = () => {
             #0c0e13 65%,
             #000000 100%
           ),
-          radial-gradient(circle, #8E9196 1px, transparent 1px)
+          radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
         `,
         backgroundSize: 'cover, 24px 24px'
       }}
