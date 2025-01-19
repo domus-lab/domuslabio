@@ -55,7 +55,7 @@ export const Projects = () => {
   const visibleProjects = showMore ? projects : projects.slice(0, 3);
 
   return (
-    <section className="py-20" id="work">
+    <section className="py-12" id="work">
       <div className="container">
         <h2 className="text-4xl font-bold mb-4 text-center">Projects</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
