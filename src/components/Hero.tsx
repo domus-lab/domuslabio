@@ -45,7 +45,7 @@ export const Hero = () => {
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
-        <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_40%)] [-webkit-text-stroke:_1px_rgba(255,255,255,0.1)]">
+        <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight text-gray-900">
           From idea to product,
           <br />
           <span 
@@ -55,13 +55,12 @@ export const Hero = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              textShadow: '0 0 20px rgba(255,255,255,0.1)'
             }}
           >
             {words[currentWordIndex].text}
           </span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl mb-8 text-gray-600 max-w-2xl mx-auto">
           Turning ideas into reality, fast, reliable and securely.
         </p>
         <Button

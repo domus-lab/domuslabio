@@ -22,20 +22,20 @@ export const Testimonials = () => {
   return (
     <section className="py-12">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-4 text-center">What Clients Say</h2>
-        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">What Clients Say</h2>
+        <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
           Don't just take our word for it - hear from the businesses we've helped succeed.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-[#2A2A2A] p-6 rounded-lg shadow-md z-10 relative hover:scale-105 transition-transform duration-300"
+              className="bg-white border rounded-lg shadow-md p-6 z-10 relative hover:scale-105 transition-transform duration-300"
             >
-              <p className="text-lg italic mb-6">"{testimonial.feedback}"</p>
+              <p className="text-lg italic mb-6 text-gray-700">"{testimonial.feedback}"</p>
               <div>
-                <p className="font-bold text-lg">{testimonial.name}</p>
-                <p className="text-muted-foreground">{testimonial.title}</p>
+                <p className="font-bold text-lg text-gray-900">{testimonial.name}</p>
+                <p className="text-gray-600">{testimonial.title}</p>
               </div>
             </div>
           ))}
