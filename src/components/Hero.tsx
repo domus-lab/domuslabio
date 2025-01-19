@@ -66,10 +66,10 @@ export const Hero = () => {
         </p>
         <Button
           size="lg"
-          className="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-none transition-all duration-300 transform hover:scale-105"
+          className="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-none transition-all duration-300 transform hover:scale-105 text-lg py-6 px-10"
           onClick={() => window.open('https://cal.com/juan-luis-gv-swcapy/30min', '_blank')}
         >
-          <Calendar className="w-4 h-4 mr-2" />
+          <Calendar className="w-5 h-5 mr-2" />
           Book a call
         </Button>
       </div>
