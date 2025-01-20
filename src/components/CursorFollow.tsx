@@ -18,9 +18,9 @@ export const CursorFollow = () => {
         
         if (distance < radius) {
           const opacity = 1 - (distance / radius);
-          (dot as HTMLElement).style.opacity = `${0.1 + (opacity * 0.3)}`; // Increased base opacity from 0.05 to 0.1
+          (dot as HTMLElement).style.opacity = `${0.2 + (opacity * 0.4)}`; // Increased opacity values
         } else {
-          (dot as HTMLElement).style.opacity = '0.1'; // Increased default opacity from 0.05 to 0.1
+          (dot as HTMLElement).style.opacity = '0.2'; // Increased base opacity
         }
       });
     };
@@ -33,15 +33,15 @@ export const CursorFollow = () => {
 
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const spacing = 16; // Changed from 24 to 16 to make points closer together
+      const spacing = 16;
 
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
           const dot = document.createElement('div');
-          dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-white rounded-full transition-opacity duration-200';
+          dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-gray-300 rounded-full transition-opacity duration-200'; // Changed color to gray-300
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.1'; // Increased initial opacity from 0.05 to 0.1
+          dot.style.opacity = '0.2'; // Increased initial opacity
           container.appendChild(dot);
         }
       }
