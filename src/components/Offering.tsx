@@ -6,12 +6,12 @@ export const Offering = () => {
   const offerings = [
     {
       title: "App",
-      description: "Native mobile app development for iOS and Android platforms.",
+      description: "Using React Native to deliver native results for both Android & iOS platforms.",
       icon: Smartphone
     },
     {
       title: "Web",
-      description: "Modern and responsive web applications built with the latest technologies.",
+      description: "Leveraging latest stack to build responsive web applications.",
       icon: Globe
     },
     {
@@ -24,12 +24,12 @@ export const Offering = () => {
   const offerings2 = [
     {
       title: "AWS infrastructure",
-      description: "Scalable and reliable cloud infrastructure using AWS services.",
+      description: "Our solution architects will deploy a reliable and scalable solution using AWS cloud services.",
       icon: Server
     },
     {
       title: "Cost optimisation",
-      description: "Efficient resource management to minimize operational costs.",
+      description: "Start saving on day 1 with us. Efficient resource management to minimize operational costs.",
       icon: DollarSign
     },
     {
