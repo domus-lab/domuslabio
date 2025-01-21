@@ -46,7 +46,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02),rgba(255,255,255,0))] pointer-events-none" />
       <div className="container px-4 mx-auto text-center animate-fade-in relative z-10">
         <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight text-gray-900">
-          From idea to product,
+          Start building today
           <br />
           <span 
             className="inline-block transition-all duration-500 mt-4 font-extrabold"
@@ -61,7 +61,7 @@ export const Hero = () => {
           </span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-600 max-w-2xl mx-auto">
-          Turning ideas into reality, fast, reliable and securely.
+          We support founders to build their product fast, reliable and scalable
         </p>
         <Button
           size="lg"
