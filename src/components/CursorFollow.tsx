@@ -22,9 +22,9 @@ export const CursorFollow = () => {
 
         if (distance < radius) {
           const opacity = 1 - (distance / radius);
-          (dot as HTMLElement).style.opacity = `${0.15 + (opacity * 0.3)}`;
+          (dot as HTMLElement).style.opacity = `${0.25 + (opacity * 0.3)}`;
         } else {
-          (dot as HTMLElement).style.opacity = '0.15';
+          (dot as HTMLElement).style.opacity = '0.25';
         }
       });
     };
@@ -41,7 +41,7 @@ export const CursorFollow = () => {
           dot.className = 'grid-dot absolute w-[1.5px] h-[1.5px] bg-gray-300 rounded-full transition-opacity duration-200';
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.15';
+          dot.style.opacity = '0.25';
           container.appendChild(dot);
         }
       }
