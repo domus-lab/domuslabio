@@ -1,35 +1,37 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export const CursorFollow = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
     const handleMouseMove = (e: MouseEvent) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
       const radius = 100;
-      const dots = document.querySelectorAll('.grid-dot');
-      
-      dots.forEach((dot) => {
+
+      const dots = container.getElementsByClassName('grid-dot');
+      Array.from(dots).forEach((dot) => {
         const rect = dot.getBoundingClientRect();
-        const dotX = rect.left + rect.width / 2;
-        const dotY = rect.top + rect.height / 2;
-        
         const distance = Math.sqrt(
-          Math.pow(e.clientX - dotX, 2) + 
-          Math.pow(e.clientY - dotY, 2)
+          Math.pow(mouseX - (rect.left + rect.width / 2), 2) +
+          Math.pow(mouseY - (rect.top + rect.height / 2), 2)
         );
-        
+
         if (distance < radius) {
           const opacity = 1 - (distance / radius);
-          (dot as HTMLElement).style.opacity = `${0.2 + (opacity * 0.4)}`; // Increased opacity values
+          (dot as HTMLElement).style.opacity = `${0.2 + (opacity * 0.4)}`;
         } else {
-          (dot as HTMLElement).style.opacity = '0.2'; // Increased base opacity
+          (dot as HTMLElement).style.opacity = '0.2';
         }
       });
     };
 
-    // Create grid dots
-    const createGridDots = () => {
-      const container = document.createElement('div');
-      container.className = 'fixed inset-0 pointer-events-none z-0';
-      document.body.appendChild(container);
+    const createGrid = () => {
+      // Clear existing dots
+      container.innerHTML = '';
 
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -38,24 +40,30 @@ export const CursorFollow = () => {
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
           const dot = document.createElement('div');
-          dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-gray-300 rounded-full transition-opacity duration-200'; // Changed color to gray-300
+          dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-gray-300 rounded-full transition-opacity duration-200';
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.2'; // Increased initial opacity
+          dot.style.opacity = '0.2';
           container.appendChild(dot);
         }
       }
     };
 
-    createGridDots();
+    createGrid();
+    window.addEventListener('resize', createGrid);
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
+      window.removeEventListener('resize', createGrid);
       window.removeEventListener('mousemove', handleMouseMove);
-      const container = document.querySelector('.grid-dots-container');
-      container?.remove();
     };
   }, []);
 
-  return null;
+  return (
+    <div
+      ref={containerRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      aria-hidden="true"
+    />
+  );
 };
