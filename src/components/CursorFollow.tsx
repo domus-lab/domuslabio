@@ -22,28 +22,26 @@ export const CursorFollow = () => {
 
         if (distance < radius) {
           const opacity = 1 - (distance / radius);
-          (dot as HTMLElement).style.opacity = `${0.2 + (opacity * 0.4)}`;
+          (dot as HTMLElement).style.opacity = `${0.15 + (opacity * 0.3)}`;
         } else {
-          (dot as HTMLElement).style.opacity = '0.2';
+          (dot as HTMLElement).style.opacity = '0.15';
         }
       });
     };
 
     const createGrid = () => {
-      // Clear existing dots
       container.innerHTML = '';
-
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const spacing = 16;
+      const spacing = 20; // Increased spacing for a more notebook-like feel
 
       for (let x = 0; x < width; x += spacing) {
         for (let y = 0; y < height; y += spacing) {
           const dot = document.createElement('div');
-          dot.className = 'grid-dot absolute w-[2px] h-[2px] bg-gray-300 rounded-full transition-opacity duration-200';
+          dot.className = 'grid-dot absolute w-[1.5px] h-[1.5px] bg-gray-300 rounded-full transition-opacity duration-200';
           dot.style.left = `${x}px`;
           dot.style.top = `${y}px`;
-          dot.style.opacity = '0.2';
+          dot.style.opacity = '0.15';
           container.appendChild(dot);
         }
       }
