@@ -53,7 +53,7 @@ export const Process = () => {
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-transparent via-[#2A2A2A] to-transparent opacity-20" />
             
             {steps.map((step, index) => (
-              <div key={step.number} className="relative flex items-center mb-8 md:mb-16 last:mb-0">
+              <div key={step.number} className="relative flex items-center mb-8 md:mb-16 last:mb-0 mr-4 ml-4">
                 {/* Content wrapper */}
                 <div className={`flex items-center w-full ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'

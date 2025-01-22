@@ -24,21 +24,21 @@ export const Projects = () => {
     },
     {
       title: "Alex Powell Racing",
-      description: "Mercedes-AMG PETRONAS F1 junior driver. We built his professional website with live updates.",
+      description: "Mercedes-AMG PETRONAS F1 junior driver. We are curently working on his professional website with live updates.",
       image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
       tags: ["Web", "Automations"],
       inProgress: true,
     },
     {
       title: "ICSL",
-      description: "Leading international shipping company in the caribean",
+      description: "Leading international shipping company in the caribean. We are working on automating their entire internal processes.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       tags: ["Tooling", "Automation"],
       inProgress: true,
     },
     {
       title: "Domus Table",
-      description: "Private dinners for private founders. Connect and grow your network through the power of unique culinary experiences.",
+      description: "Connect with founders and expand your network through curated culinary experiences.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       tags: ["Design", "Web"],
       inProgress: true,
@@ -66,7 +66,7 @@ export const Projects = () => {
             <div 
               key={index} 
               className={cn(
-                "bg-[#222222] rounded-2xl shadow-md overflow-hidden transition-all duration-300 z-10",
+                "rounded-2xl shadow-md overflow-hidden transition-all duration-300 z-10 bg-white",
                 index > 2 && "animate-fade-in"
               )}
             >
@@ -107,7 +107,7 @@ export const Projects = () => {
               variant="outline"
               size="lg"
               onClick={() => setShowMore(true)}
-              className="group bg-[#222222] hover:bg-[#2A2A2A]"
+              className="group hover:bg-[#2A2A2A]"
             >
               <ChevronDown className="mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1" />
               Show More Projects
