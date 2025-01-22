@@ -43,7 +43,8 @@ export const Process = () => {
   return (
     <section className="py-16 md:py-24" id="process">
       <div className="container px-4 md:px-24">
-        <div className="bg-gradient-to-br from-[#e6e9f0] to-[#eef1f5] rounded-xl p-6 md:p-20">
+        {/* Background gradient */}
+        <div className="bg-[#e6e9f0] z-10 rounded-xl p-6 md:p-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-800">Our Process</h2>
           <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-16 text-center max-w-2xl mx-auto">
             A proven methodology that ensures successful project delivery and client satisfaction.
