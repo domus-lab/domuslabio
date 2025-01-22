@@ -44,7 +44,7 @@ export const Pricing = () => {
     }
   ];
 
-  return (
+  return null;/* (
     <section className="py-16" id="pricing">
       <div className="container px-8 md:px-16">
         <div className="bg-gradient-to-r from-[#accbee] to-[#e7f0fd] rounded-xl p-8 md:p-16">
@@ -100,5 +100,5 @@ export const Pricing = () => {
         </div>
       </div>
     </section>
-  );
+  );*/
 };
