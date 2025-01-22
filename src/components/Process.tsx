@@ -64,7 +64,7 @@ export const Process = () => {
                       ? 'md:absolute md:left-1/2 md:-translate-x-1/2' 
                       : 'md:absolute md:left-1/2 md:-translate-x-1/2'
                   }`}>
-                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center">
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
                         {<step.icon size={20} />}
                       </div>
