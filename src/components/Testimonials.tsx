@@ -4,17 +4,17 @@ export const Testimonials = () => {
   const testimonials = [
     {
       name: "Fred B.",
-      title: "CEO",
+      title: "CEO - Aeddix",
       feedback: "Working with this team was transformative. They helped us reduce our infrastructure costs by 30% and delivered a stunning website redesign in record time. Their expertise and quick turnaround made a significant impact on our business.",
     },
     {
       name: "Jim U.",
-      title: "Head of Product",
-      feedback: "Their expertise in building scalable infrastructure was crucial for our success. Thanks to their work, our product maintained 100% reliability, which was instrumental in securing our funding round. They truly understand what it takes to build enterprise-grade solutions.",
+      title: "Head of Product - Carlito app",
+      feedback: "Their expertise in building scalable infrastructure was crucial for our success. Thanks to their work, our product maintained 100% reliability, which was key to later be acquired by a big company.",
     },
     {
       name: "John P.",
-      title: "CEO",
+      title: "CEO - ICSL",
       feedback: "We just started working with Juan and his team. Their solution has reduced our tech cost by 50% and improved our operations. Awesome work!",
     },
   ];
