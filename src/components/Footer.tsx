@@ -20,7 +20,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://cal.com/juan-luis-gv-swcapy/30min" 
+                  href="https://cal.com/domuslab-io/30min" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-gray-900 transition-colors"
