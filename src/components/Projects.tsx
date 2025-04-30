@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -35,7 +34,7 @@ export const Projects = () => {
       description: "Mercedes-AMG PETRONAS F1 junior driver. We are curently working on his professional website with live updates.",
       image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
       tags: ["Web", "Automations"],
-      inProgress: true,
+      inProgress: false,
     },
     {
       title: "ICSL",
