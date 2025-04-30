@@ -25,9 +25,9 @@ export const Projects = () => {
     },
     {
       title: "Notrispace",
-      description: "A modern digital workspace platform enabling teams to collaborate efficiently with integrated tools and workflows.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      tags: ["Web", "Infrastructure", "UX Design"],
+      description: "Nutrition made easy. A modern software for nutritionists to grow their practice and access AI tools.",
+      image: "/lovable-uploads/8efbdae3-a4f9-4903-8341-6619f84c2dc9.png",
+      tags: ["Web", "AI Integration", "UX Design"],
       inProgress: false,
     },
     {
