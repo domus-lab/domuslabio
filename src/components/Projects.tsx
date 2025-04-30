@@ -1,5 +1,6 @@
+
 import * as React from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -14,6 +15,7 @@ export const Projects = () => {
       image: "/lovable-uploads/a53372c0-6dc7-4687-a62a-883e941fb865.png",
       tags: ["App", "Web", "Infrastructure", "Cost opt", "Hiring", "Fractional CTO"],
       inProgress: false,
+      url: "https://gronda.com",
     },
     {
       title: "Aeddix",
@@ -21,6 +23,7 @@ export const Projects = () => {
       image: "/lovable-uploads/4ace3f6b-db75-4fbc-99a3-dd2275ff51f9.png",
       tags: ["Web", "Infrastructure", "Cost opt", "Fractional CTO"],
       inProgress: false,
+      url: "https://aeddix.com",
     },
     {
       title: "Notrispace",
@@ -28,6 +31,7 @@ export const Projects = () => {
       image: "/lovable-uploads/8efbdae3-a4f9-4903-8341-6619f84c2dc9.png",
       tags: ["Web", "AI Integration", "UX Design"],
       inProgress: false,
+      url: "https://notrispace.com",
     },
     {
       title: "Alex Powell Racing",
@@ -35,13 +39,7 @@ export const Projects = () => {
       image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
       tags: ["Web", "Automations"],
       inProgress: false,
-    },
-    {
-      title: "ICSL",
-      description: "Leading international shipping company in the caribean. We are working on automating their entire internal processes.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      tags: ["Tooling", "Automation"],
-      inProgress: true,
+      url: "https://alexpowellracing.com",
     },
     {
       title: "Domus Table",
@@ -49,6 +47,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       tags: ["Design", "Web"],
       inProgress: true,
+      url: "https://domustable.com",
     },
     {
       title: "Coming Soon",
@@ -56,10 +55,13 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       tags: [],
       inProgress: false,
+      url: "",
     },
   ];
 
-  const visibleProjects = showMore ? projects : projects.slice(0, 3);
+  // Filter out ICSL as requested
+  const filteredProjects = projects.filter(project => project.title !== "ICSL");
+  const visibleProjects = showMore ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <section className="py-12" id="work">
@@ -70,21 +72,31 @@ export const Projects = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleProjects.map((project, index) => (
-            <div 
-              key={index} 
+            <a 
+              key={index}
+              href={project.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className={cn(
-                "rounded-2xl shadow-md overflow-hidden transition-all duration-300 z-10 bg-white",
+                "block rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg z-10 bg-white group",
                 index > 2 && "animate-fade-in"
               )}
             >
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-48 object-cover"
-              />
+              <div className="w-full h-48 overflow-hidden relative">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                />
+                {project.url && (
+                  <div className="absolute top-3 right-3 bg-white/90 p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ExternalLink size={16} className="text-gray-700" />
+                  </div>
+                )}
+              </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold group-hover:underline">{project.title}</h3>
                   {project.inProgress && (
                     <Badge variant="secondary" className="bg-yellow-600/20 text-yellow-500 hover:bg-yellow-600/30">
                       In Progress
@@ -104,11 +116,11 @@ export const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         
-        {!showMore && (
+        {!showMore && filteredProjects.length > 3 && (
           <div className="mt-12 text-center relative z-10">
             <Button
               variant="outline"
