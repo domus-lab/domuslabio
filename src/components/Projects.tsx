@@ -23,6 +23,13 @@ export const Projects = () => {
       inProgress: false,
     },
     {
+      title: "Notrispace",
+      description: "A modern digital workspace platform enabling teams to collaborate efficiently with integrated tools and workflows.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      tags: ["Web", "Infrastructure", "UX Design"],
+      inProgress: false,
+    },
+    {
       title: "Alex Powell Racing",
       description: "Mercedes-AMG PETRONAS F1 junior driver. We are curently working on his professional website with live updates.",
       image: "/lovable-uploads/511fd109-4ebe-489f-94e6-44f202d8c1cc.png",
