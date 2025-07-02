@@ -50,11 +50,11 @@ export const Projects = () => {
       url: "https://domustable.com",
     },
     {
-      title: "Coming Soon",
-      description: "New exciting project in development.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      tags: [],
-      inProgress: false,
+      title: "Sylvi Penpal",
+      description: "Practice conversation in your target language. Text or speak with AI penpals or your friends (regardless of their language or level). Stop learning random words and start having real conversations.",
+      image: "/lovable-uploads/38293f32-2c7e-4673-8fc9-617b2623ad7a.png",
+      tags: ["AI", "Language Learning", "Mobile App"],
+      inProgress: true,
       url: "",
     },
   ];
