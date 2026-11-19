@@ -27,13 +27,24 @@
   min-height: 82px;
   border-bottom: 1px solid var(--line);
 }
-.studio-wordmark { display: inline-flex; align-items: center; gap: 10px; width: max-content; min-height: 44px; font-size: 29px; font-weight: 700; letter-spacing: -.08em; }
-.studio-mark {
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  background: currentColor;
-  clip-path: polygon(36% 0,64% 0,64% 36%,100% 36%,100% 64%,64% 64%,64% 100%,36% 100%,36% 64%,0 64%,0 36%,36% 36%);
+.studio-wordmark { display: inline-flex; align-items: center; width: max-content; min-height: 44px; }
+/* The original square brand asset includes padding for social previews. */
+.studio-wordmark-art {
+  display: block;
+  position: relative;
+  width: 162px;
+  aspect-ratio: 430 / 72;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+.studio-wordmark-art img {
+  position: absolute;
+  width: calc(500 / 430 * 100%);
+  max-width: none;
+  height: auto;
+  top: calc(-215 / 72 * 100%);
+  left: calc(-35 / 430 * 100%);
+  filter: brightness(1.02);
 }
 .studio-nav-links { display: flex; gap: clamp(18px, 3vw, 46px); }
 .studio-nav-links a, .studio-footer > a:last-child { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; font-size: 14px; }
@@ -144,8 +155,7 @@
   .studio-wrap { width: calc(100% - 32px); }
   .studio-nav { grid-template-columns: 1fr auto; gap: 0 10px; padding-top: 5px; }
   .studio-nav-links { grid-row: 2; grid-column: 1 / -1; justify-content: center; gap: 27px; }
-  .studio-wordmark { font-size: 25px; }
-  .studio-mark { width: 21px; height: 21px; }
+  .studio-wordmark-art { width: 132px; }
   .studio-contact { padding-inline: 10px; }
   .studio-hero { grid-template-columns: 1fr; min-height: 0; margin-top: 12px; }
   .studio-hero-copy { padding: 30px clamp(20px, 6vw, 38px) 31px; }

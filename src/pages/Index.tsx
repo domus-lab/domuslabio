@@ -58,9 +58,10 @@ const approach = [
 
 function Wordmark() {
   return (
-    <a className="studio-wordmark" href="#top" aria-label="Domuslab home">
-      <span className="studio-mark" aria-hidden="true" />
-      domuslab
+    <a className="studio-wordmark" href="#top" aria-label="DomusLab home">
+      <span className="studio-wordmark-art">
+        <img src={`${import.meta.env.BASE_URL}og-image.png`} alt="" width="500" height="500" />
+      </span>
     </a>
   );
 }
