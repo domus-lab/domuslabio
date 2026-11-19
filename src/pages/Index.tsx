@@ -14,28 +14,33 @@ const projects = [
   {
     name: "TwinPath",
     relationship: "Domuslab product",
-    description: "A daily companion that brings your health diary, care and learning together.",
+    description: "A daily companion for women’s health.",
     image: "daily-health",
     site: { domain: "twinpath.app", url: "https://twinpath.app/" },
   },
   {
     name: "Haily Health",
     relationship: "Domuslab product",
-    description: "A health venture focused on helping people live longer, healthier lives.",
-    image: "healthy-living",
+    description: "Agentic care teams for clinics and labs.",
+    image: "clinical-team",
     site: { domain: "hailyhealth.com", url: "https://hailyhealth.com/" },
   },
   {
     name: "Notrispace",
     relationship: "Studio partner",
-    description: "A workspace for nutrition practitioners, from scheduling and meal plans to client follow-up.",
+    description: "CRM and electronic health records for practices and clinics.",
     image: "nutrition-practice",
     site: { domain: "notrispace.com", url: "https://notrispace.com/" },
   },
   {
     name: "Forma Health",
     relationship: "Upcoming studio partner",
-    description: "More on this partnership soon.",
+    description: "A health companion.",
+  },
+  {
+    name: "Yiayia",
+    description: "A health companion for older adults and their families.",
+    image: "healthy-living",
   },
 ];
 
@@ -77,8 +82,7 @@ export default function Index() {
       <main id="main">
         <section className="studio-hero studio-wrap" aria-labelledby="hero-title">
           <div className="studio-hero-copy">
-            <p className="studio-kicker"><span aria-hidden="true" /> Independent healthtech studio</p>
-            <h1 id="hero-title">Health is<br />human.</h1>
+            <h1 id="hero-title">Building<br /> better care.</h1>
             <p>We build health products and partner with teams making care easier to access, deliver and navigate.</p>
             <a className="studio-button" href="#work">Explore our portfolio <ArrowDown size={19} aria-hidden="true" /></a>
           </div>
@@ -91,7 +95,7 @@ export default function Index() {
               <p className="studio-kicker">Portfolio</p>
               <h2 id="work-title">What we’re building.</h2>
             </div>
-            <p>Products we own and partnerships that bring new ideas into health and care.</p>
+            <p>Health companions for everyday life and tools for the teams delivering care.</p>
           </div>
           <div className="studio-project-grid">
             {projects.map(({ name, relationship, description, image, site }) => (
@@ -106,7 +110,7 @@ export default function Index() {
                   </div>
                 )}
                 <div className="studio-project-info">
-                  <p className="studio-kicker">{relationship}</p>
+                  {relationship && <p className="studio-kicker">{relationship}</p>}
                   <h3>{name}</h3>
                   <p>{description}</p>
                   {site && <a href={site.url} aria-label={`${site.domain} — Visit ${name}`}>{site.domain} <ArrowUpRight size={16} aria-hidden="true" /></a>}
@@ -163,7 +167,6 @@ export default function Index() {
 
       <footer className="studio-wrap studio-footer">
         <Wordmark />
-        <p>Independent healthtech studio</p>
         <a href={contact}>hello@domuslab.io <ArrowUpRight size={15} aria-hidden="true" /></a>
       </footer>
     </div>
